@@ -1,4 +1,3 @@
-```markdown
 # CloudFlex
 
 CloudFlex is a simple CLI tool for managing cloud infrastructure. It supports basic operations such as initializing a project, planning changes, applying changes, and destroying infrastructure.
