@@ -1,5 +1,6 @@
 import click
 import os
+import yaml
 from cloudflex.core.parser import parse_config
 
 @click.command()
