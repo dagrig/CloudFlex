@@ -1,6 +1,6 @@
 import click
 from cloudflex.core.parser import parse_config
-from cloudflex.core.state import load_state, save_state
+from cloudflex.core.state import save_state, load_state
 from cloudflex.utils.cloud_api import get_provider
 
 @click.command()
@@ -11,10 +11,9 @@ def destroy():
     provider = get_provider(config)
     state = load_state()
     
-    # Example of destroying resources for an AWS EC2 instance
-    for resource_name, instance_id in state.items():
-        provider.terminate_instance(instance_id)
-        del state[resource_name]
+    for resource_name, resource_id in state.items():
+        provider.terminate_instance(resource_id)
+        click.echo(f"Instance {resource_name} with ID {resource_id} terminated")
     
+    state.clear()
     save_state(state)
-    click.echo("Infrastructure destroyed successfully.")
