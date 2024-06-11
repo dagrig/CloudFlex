@@ -1,0 +1,36 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment directory
+venv/
+env/
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.swp
+
+# Ignore configuration files
+cloudflex.yaml
+
+# Ignore state files
+state.json
+
+# Ignore logs
+logs/
+*.log
+
+# Ignore environment variable files
+.env
+
+# Ignore compiled code
+*.so
+*.dll
+*.dylib
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
